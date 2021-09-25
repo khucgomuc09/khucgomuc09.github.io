@@ -1,0 +1,459 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #d5d5d5;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("../resources/img/milky-way-2695569_1920.jpg");
+}
+
+/* #region common */
+
+ul, ol[class] {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #eee;
+    font-family: poppins, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.active{
+    color: #5050f5;
+}
+/* #endregion common */
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    min-height: 80vh;
+    margin: 10vh auto;
+    padding: 0;
+    background-color: #444444;
+    border-radius: 32px;
+    opacity: 0.97;
+}
+
+/* start left contain */
+
+.container .left-contain {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    max-width: 380px;
+    height: 30%;
+    max-height: 80vh;
+    min-height: inherit;
+    text-align: center;
+    padding: 70px 30px 45px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.header-content .header-photo {
+    position: relative;
+    width: 180px;
+    margin: 0 auto 30px;
+    z-index: 1;
+}
+
+.header-content .header-photo img {
+    width: 180px;
+    background-color: #fff;
+    border: 3px solid #fff;
+    border-radius: 300px;
+}
+
+.header-content .header-photo:after {
+    position: absolute;
+    opacity: 0.3;
+    top: 4%;
+    left: 8%;
+    border-radius: 300px;
+    content: '';
+    height: calc(100% + 0px);
+    width: calc(102% + 0px);
+    background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
+    background-size: 6px 6px;
+    z-index: -1;
+}
+
+.header-content .header-titles h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #f5f5f5;
+    margin: 5px 0 7px;
+    line-height: 1.2em;
+}
+
+.header-content .header-titles h4 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #bbb;
+    margin: 5px 0;
+    line-height: 1.2em;
+}
+
+.social-network {
+    margin-top: 10%;
+}
+
+.social-network ul li {
+    display: inline-block;
+}
+
+.social-network ul li:hover {
+    /* display: inline-block; */
+    opacity: 1;
+    background-color: #787878;
+    border-radius: 100%;
+    transition: .3s;
+}
+
+.social-network ul li a {
+    color: inherit;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    opacity: .8;
+}
+
+.btn-download-cv {
+    margin-top: 18%;
+}
+
+.btn-download-cv a {
+    background-color: transparent;
+    color: #f5f5f5;
+    border-color: #f5f5f5;
+    border: solid 2px;
+    border-radius: 32px;
+    text-decoration: none;
+    padding: 12px 36px;
+}
+
+.btn-download-cv a:hover {
+    background-color: #fff;
+    color: #5050f5;
+    border-color: #fff;
+    transition: .5s;
+}
+
+/* end left contain */
+
+/* start right contain */
+
+.container .right-contain {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    max-width: calc(100% - 380px);
+}
+
+.right-contain .animated-sections {
+    position: relative;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.animated-sections .section-active {
+    visibility: visible !important;
+}
+
+.animated-sections .animated-section {
+    position: absolute;
+    background-color: #222;
+    height: 80%;
+    width: 87%;
+    border-radius: 30px;
+    padding: 60px;
+    background-position: 50% 50%;
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    opacity: 0.98;
+    visibility: hidden;
+}
+
+/* #region home content */
+
+.animated-section .home-content {
+    position: relative;
+    top: 38%;
+}
+
+.home-content h2 {
+    color: #f5f5f5;
+    font-size: 60px;
+    line-height: 74px;
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+.home-content h4 {
+    color: #aaa;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* #endregion home content */
+
+/*#region about-me */
+
+.animated-section .page-title {
+    display: inline-block;
+    position: relative;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.page-title h2 {
+    position: relative;
+    font-size: 32px;
+    z-index: 1;
+}
+
+.page-title h2 span {
+    color: #5050f5;
+}
+
+.page-title:after {
+    position: absolute;
+    opacity: .45;
+    top: 10px;
+    right: 0;
+    content: '';
+    height: 30px;
+    width: 50px;
+    background-image: -webkit-repeating-radial-gradient(center center, #5050f5, #5050f5 1px, transparent 0px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, #5050f5, #5050f5 1px, transparent 0px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, #5050f5, #5050f5 1px, transparent 0px, transparent 100%);
+    -webkit-background-size: 6px 6px;
+    -moz-background-size: 6px 6px;
+    background-size: 6px 6px;
+    z-index: 0;
+}
+
+.animated-section .about-me-content {
+    height: 100%;
+}
+
+.animated-section .about-me-content::after {
+    display: block;
+    content: "";
+    clear: none;
+}
+
+.about-me-content .personal-info {
+    position: relative;
+    height: 36%;
+}
+
+.personal-info .introdution {
+    position: absolute;
+    width: 60%;
+}
+
+.introdution p {
+    height: 100%;
+}
+
+.personal-info .info-list {
+    position: absolute;
+    right: 0;
+    width: 35%;
+}
+
+.info-list ul li {
+    margin-bottom: 10px;
+}
+
+.info-list .title {
+    color: #5050f5;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+.info-list .value, a {
+    color: #cbcbcb;
+}
+
+/* my hobbies */
+
+.block-title h3 span {
+    color: #5050f5;
+    position: relative;
+}
+
+.block-title span:after {
+    position: absolute;
+    opacity: .45;
+    top: 8px;
+    right: -10px;
+    content: '';
+    height: 20px;
+    width: 30px;
+    background-image: -webkit-repeating-radial-gradient(center center, #5050f5, #5050f5 1px, transparent 0px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, #5050f5, #5050f5 1px, transparent 0px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, #5050f5, #5050f5 1px, transparent 0px, transparent 100%);
+    -webkit-background-size: 6px 6px;
+    -moz-background-size: 6px 6px;
+    background-size: 6px 6px;
+    z-index: 0;
+}
+.hobbies .fa{
+    color: #5050f5;
+    margin: 16px 0 10px 0;
+}
+.hobbies h4{
+    margin-bottom: 10px;
+
+}
+.about-me-content .hobbies{
+    display: flex;
+}
+.hobbies .hobbies-left{
+    margin: 16px 0 0 0;
+    width: 48%;
+    height: 100%;
+    padding: 0 16px 0 0;
+} 
+.hobbies .hobbies-right{
+    margin: 16px 0 0 0;
+    width: 48%;
+    height: 100%;
+    padding: 0 0 0 16px;
+} 
+
+/*end my hobbies */
+
+
+/* endRegion about-me */
+
+/* end right contain */
+
+/* #region menu*/
+
+.menu .main-menu {
+    position: absolute;
+    padding: 15px 0;
+    width: 70px;
+    right: -90px;
+    background-color: #444;
+    border-radius: 35px;
+    z-index: 999;
+    top: 0;
+    box-shadow: 0 0 30px -5px rgb(0 0 0 / 15%);
+}
+
+.main-menu li {
+    position: relative;
+}
+
+.main-menu li a {
+    color: #fff;
+    border-radius: 20px;
+    font-size: 30px;
+    padding: 0;
+    width: 100%;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    opacity: .8;
+}
+
+.main-menu li span {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 30%;
+    opacity: 0;
+    width: max-content;
+    font-size: 16px;
+    padding: 4px 10px;
+    color: blanchedalmond;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 10px -8px rgb(0 0 0 / 22%);
+}
+
+.main-menu li:hover i {
+    color: #5050f5;
+}
+
+.main-menu li:hover span {
+    right: 100%;
+    opacity: 1;
+    visibility: visible;
+    background-color: #5050f5;
+}
+
+/* #endregion menu*/
+
+/* #region scrollbar */
+
+.section-active {
+    overflow: auto;
+}
+
+/* width */
+
+.section-active::-webkit-scrollbar {
+    width: 6px;
+    }
+
+/* Track */
+
+.section-active::-webkit-scrollbar-track {
+    background: transparent;
+    
+}
+
+/* Handle */
+/* 
+.section-active::-webkit-scrollbar-thumb {
+    position: relative;
+    right: 10px;
+    
+} */
+
+/* Handle on hover */
+
+/* .section-active::-webkit-scrollbar-thumb:hover {
+    background: #5050f5;
+    width: 11px;
+    border-radius: 30px;
+    height: 325px;
+    position: relative;
+    right: 10px;
+} */
+
+/* #endregion scrollbar */
