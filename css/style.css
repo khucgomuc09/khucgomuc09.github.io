@@ -13,9 +13,11 @@ body {
     background-image: url("../resources/img/milky-way-2695569_1920.jpg");
 }
 
+
 /* #region common */
 
-ul, ol[class] {
+ul,
+ol[class] {
     list-style: none;
 }
 
@@ -23,15 +25,22 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #eee;
     font-family: poppins, Helvetica, sans-serif;
     font-weight: 600;
 }
 
-.active{
+.active {
     color: #5050f5;
 }
+
+
 /* #endregion common */
 
 .container {
@@ -45,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 32px;
     opacity: 0.97;
 }
+
 
 /* start left contain */
 
@@ -116,7 +126,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-network ul li:hover {
-    /* display: inline-block; */
     opacity: 1;
     background-color: #787878;
     border-radius: 100%;
@@ -158,7 +167,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: .5s;
 }
 
+
 /* end left contain */
+
 
 /* start right contain */
 
@@ -195,7 +206,9 @@ h1, h2, h3, h4, h5, h6 {
     backface-visibility: hidden;
     opacity: 0.98;
     visibility: hidden;
+    overflow: auto;
 }
+
 
 /* #region home content */
 
@@ -220,7 +233,23 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.home-content .name {
+    position: relative;
+    animation: nanimation 3s 1;
+}
+
+@keyframes nanimation {
+    0% {
+        color: transparent;
+    }
+    40% {
+        letter-spacing: 16px;
+    }
+}
+
+
 /* #endregion home content */
+
 
 /*#region about-me */
 
@@ -299,9 +328,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-.info-list .value, a {
+.info-list .value,
+a {
     color: #cbcbcb;
 }
+
 
 /* my hobbies */
 
@@ -326,36 +357,111 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 6px 6px;
     z-index: 0;
 }
-.hobbies .fa{
+
+.hobbies .fa {
     color: #5050f5;
     margin: 16px 0 10px 0;
 }
-.hobbies h4{
-    margin-bottom: 10px;
 
+.hobbies h4 {
+    margin-bottom: 10px;
 }
-.about-me-content .hobbies{
+
+.about-me-content .hobbies {
     display: flex;
 }
-.hobbies .hobbies-left{
+
+.hobbies .hobbies-left {
     margin: 16px 0 0 0;
     width: 48%;
     height: 100%;
     padding: 0 16px 0 0;
-} 
-.hobbies .hobbies-right{
+}
+
+.hobbies .hobbies-right {
     margin: 16px 0 0 0;
     width: 48%;
     height: 100%;
     padding: 0 0 0 16px;
-} 
+}
+
 
 /*end my hobbies */
 
 
 /* endRegion about-me */
 
+
+/* #region resume */
+
+
+/* #endregion resume */
+
+
+/* #region portfolio */
+
+.size-height-3x4 {
+    height: 333px;
+}
+
+.size-height-1x1 {
+    height: 250px;
+}
+
+.row-height-3x4 {
+    height: 400px;
+}
+
+.row-height-1x1 {
+    height: 300px;
+}
+
+#portfolio .portfolio-content {
+    position: relative;
+    height: 100%;
+    transition: height 450ms ease-out 0s;
+}
+
+.portfolio-content .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 32px;
+}
+
+.portfolio-content .item {
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    transition: transform 450ms ease-out 0s, opacity 450ms ease-out 0s;
+}
+
+.item .portfolio-item-img {
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+}
+
+.portfolio-item-img img {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item>h4 {
+    margin-top: 16px;
+    text-align: justify;
+}
+
+
+/* #endregion portfolio */
+
+
 /* end right contain */
+
 
 /* #region menu*/
 
@@ -416,44 +522,25 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #5050f5;
 }
 
+
 /* #endregion menu*/
+
 
 /* #region scrollbar */
 
-.section-active {
-    overflow: auto;
-}
 
 /* width */
 
 .section-active::-webkit-scrollbar {
     width: 6px;
-    }
+}
+
 
 /* Track */
 
 .section-active::-webkit-scrollbar-track {
     background: transparent;
-    
 }
 
-/* Handle */
-/* 
-.section-active::-webkit-scrollbar-thumb {
-    position: relative;
-    right: 10px;
-    
-} */
-
-/* Handle on hover */
-
-/* .section-active::-webkit-scrollbar-thumb:hover {
-    background: #5050f5;
-    width: 11px;
-    border-radius: 30px;
-    height: 325px;
-    position: relative;
-    right: 10px;
-} */
 
 /* #endregion scrollbar */

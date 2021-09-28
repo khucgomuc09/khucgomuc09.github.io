@@ -1,5 +1,4 @@
-$(document).ready(function () {
-
+$(document).ready(function() {
     var btn_home = $('#btn-nav-home'),
         btn_about_me = $('#btn-nav-about-me'),
         btn_resume = $('#btn-nav-resume'),
@@ -9,22 +8,32 @@ $(document).ready(function () {
         section_resume = $("#resume"),
         section_portfolio = $("#portfolio");
 
-    btn_home.click(function () {
+    let slogan = "The only way we can grow and get on in this world is to accept the fact we are not perfect and live accordingly.";
+    setTimeout(() => showText("#slogan", slogan, 0, 40), 2500);
+    btn_home.click(function() {
         eClickBtn(btn_home)
         setSectionActive(btn_home);
-    }
-    );
-    btn_resume.click(function () {
-        eClickBtn(btn_resume);
-        setSectionActive(btn_resume);
+        addAnimation();
+        $("#slogan").text("");
+        setTimeout(() => showText("#slogan", slogan, 0, 40), 2500);
     });
-    btn_about_me.click(function () {
+    btn_about_me.click(function() {
         eClickBtn(btn_about_me);
         setSectionActive(btn_about_me);
+        removeAnimation();
     });
-    btn_portfolio.click(function () {
+
+    btn_resume.click(function() {
+        eClickBtn(btn_resume);
+        setSectionActive(btn_resume);
+        removeAnimation();
+    });
+
+
+    btn_portfolio.click(function() {
         eClickBtn(btn_portfolio);
         setSectionActive(btn_portfolio);
+        removeAnimation();
     });
 
     function eClickBtn(btn) {
@@ -59,6 +68,7 @@ $(document).ready(function () {
                 break;
         }
     }
+
     function setSectionActive(btn) {
         switch (btn) {
             case btn_home:
@@ -91,4 +101,20 @@ $(document).ready(function () {
         }
     }
 
+    function addAnimation(e) {
+        let name = section_home.find("#name");
+        name.addClass("name");
+    }
+
+    function removeAnimation(e) {
+        let name = section_home.find("#name");
+        name.removeClass("name");
+    }
+
+    const showText = function(target, message, index, interval) {
+        if (index < message.length) {
+            $(target).append(message[index++]);
+            setTimeout(function() { showText(target, message, index, interval); }, interval);
+        }
+    }
 });
